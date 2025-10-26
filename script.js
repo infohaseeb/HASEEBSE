@@ -1,5 +1,6 @@
 // Set current year in footer
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // Smooth scrolling for internal links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -33,9 +34,6 @@ function changeActive() {
 changeActive();
 window.addEventListener('scroll', changeActive);
 
-
-
-
 // Typing effect for hero text
 const roles = [
   "Cloud & Software Engineer 💻",
@@ -43,7 +41,6 @@ const roles = [
   "Django + PostgreSQL Developer 🔐",
   "DevOps & Automation Enthusiast ⚙️",
   "Operations Handling 💻"
-
 ];
 
 let rIndex = 0;
@@ -51,6 +48,7 @@ let charIndex = 0;
 let typingEl = document.querySelector(".typing");
 
 function type() {
+  if (!typingEl) return; // skip if no typing element
   if (charIndex < roles[rIndex].length) {
     typingEl.textContent += roles[rIndex].charAt(charIndex);
     charIndex++;
@@ -61,6 +59,7 @@ function type() {
 }
 
 function erase() {
+  if (!typingEl) return;
   if (charIndex > 0) {
     typingEl.textContent = roles[rIndex].substring(0, charIndex - 1);
     charIndex--;
@@ -73,47 +72,40 @@ function erase() {
 
 type();
 
-
-
 // Simple contact form feedback
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const alertBox = document.getElementById('formAlert');
-  alertBox.style.display = 'block';
-  alertBox.className = 'alert alert-success mt-2';
-  alertBox.innerText = 'Thank you! Your message has been sent.';
-  this.reset();
-});
-
-
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const alertBox = document.getElementById('formAlert');
+    if (alertBox) {
+      alertBox.style.display = 'block';
+      alertBox.className = 'alert alert-success mt-2';
+      alertBox.innerText = 'Thank you! Your message has been sent.';
+    }
+    this.reset();
+  });
+}
 
 // Scroll to top when #scrollUp is clicked
-document.getElementById('scrollUp').addEventListener('click', function(e) {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+const scrollUp = document.getElementById('scrollUp');
+if (scrollUp) {
+  scrollUp.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
-// Show/hide up arrow on scroll
-window.addEventListener('scroll', function() {
-  const scrollUp = document.getElementById('scrollUp');
-  if (window.scrollY > 300) { // show after scrolling down 300px
-    scrollUp.style.display = 'block';
-  } else {
-    scrollUp.style.display = 'none';
-  }
-});
-
-
-
-
+  // Show/hide up arrow on scroll
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) scrollUp.style.display = 'block';
+    else scrollUp.style.display = 'none';
+  });
+}
 
 // =================== LIGHT / DARK MODE TOGGLE ===================
-const toggleBtn = document.getElementById('themeToggle');
 const body = document.body;
-
-// Only run if button exists
+const toggleBtn = document.getElementById('themeToggle');
 if (toggleBtn) {
-  // Load saved theme
   if (localStorage.getItem('theme') === 'light') {
     body.classList.add('light-mode');
     toggleBtn.textContent = '☀️';
@@ -121,7 +113,6 @@ if (toggleBtn) {
     toggleBtn.textContent = '🌙';
   }
 
-  // Toggle theme on click
   toggleBtn.addEventListener('click', () => {
     body.classList.toggle('light-mode');
     const isLight = body.classList.contains('light-mode');
@@ -129,33 +120,58 @@ if (toggleBtn) {
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
   });
 }
+// Move theme toggle on mobile if parent is hidden
+if (toggleBtn) {
+  const originalParent = toggleBtn.parentElement; // current parent
+  const container = document.querySelector('.container'); // safe place to append on mobile
+
+  function moveToggle() {
+    if (window.innerWidth < 992) {
+      // append to container if not already there
+      if (!container.contains(toggleBtn)) {
+        container.appendChild(toggleBtn);
+        toggleBtn.style.position = 'fixed';
+        toggleBtn.style.top = '10px';
+        toggleBtn.style.right = '10px';
+        toggleBtn.style.zIndex = 1050;
+      }
+    } else {
+      // move back to original parent on desktop
+      if (!originalParent.contains(toggleBtn)) {
+        originalParent.appendChild(toggleBtn);
+        toggleBtn.style.position = '';
+        toggleBtn.style.top = '';
+        toggleBtn.style.right = '';
+      }
+    }
+  }
+
+  window.addEventListener('resize', moveToggle);
+  moveToggle(); // run on page load
+}
+
 
 
 // Show date only
+const dateEl = document.getElementById("date");
+if (dateEl) {
   function updateDate() {
     const now = new Date();
-    const date = now.toLocaleDateString([], { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
-    const el = document.getElementById("date");
-    if (el) el.textContent = date;
+    dateEl.textContent = now.toLocaleDateString([], { weekday:'short', year:'numeric', month:'short', day:'numeric' });
   }
   updateDate();
-  setInterval(updateDate, 60000); // update every minute
+  setInterval(updateDate, 60000);
+}
 
-  // Fetch country using GeoJS and show Language
-  document.addEventListener('DOMContentLoaded', () => {
-    fetch("https://get.geojs.io/v1/ip/country.json")
-      .then(res => res.json())
-      .then(data => {
-        const country = data?.name || '';
-        const el = document.getElementById("user-country");
-        if (el) {
-          el.textContent = country
-            ? `Language: English (${country})`
-            : "Language: English";
-        }
-      })
-      .catch(() => {
-        const el = document.getElementById("user-country");
-        if (el) el.textContent = "Language: English";
-      });
-  });
+// Fetch country using GeoJS and show Language
+const countryEl = document.getElementById("user-country");
+if (countryEl) {
+  fetch("https://get.geojs.io/v1/ip/country.json")
+    .then(res => res.json())
+    .then(data => {
+      const country = data?.name || '';
+      countryEl.textContent = country ? `Language: English (${country})` : "Language: English";
+    })
+    .catch(() => { countryEl.textContent = "Language: English"; });
+}
+
