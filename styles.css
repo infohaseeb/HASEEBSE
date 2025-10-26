@@ -52,6 +52,14 @@ body {
   color: var(--text-color);
   transition: color 0.5s;
 }
+@media (max-width: 768px) {
+  #date,
+  #user-country,
+  .topbar a[href*="linkedin.com"] {
+    display: none;
+  }
+}
+
 
 /* =============================================
    NAVBAR
@@ -282,3 +290,5 @@ body.light-mode .text-accent {
 body.light-mode .text-white {
   color: var(--text-color) !important;
 }
+
+
