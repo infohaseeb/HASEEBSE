@@ -1,2 +1,0 @@
-# HASEEBSE
-Haseeb Portfolio 
