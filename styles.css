@@ -7,7 +7,7 @@
   --glass-bg: rgba(255,255,255,0.14);
   --glass-border: rgba(255,255,255,0.22);
   --text-color: rgba(255,255,255,0.95);
-  --body-bg: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,0,0,0.1)), linear-gradient(135deg, #6fe22d, #4a00e0);
+  --body-bg: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,0,0,0.1)), linear-gradient(135deg, #2a4620, #3a3444);
   --input-bg: rgba(255,255,255,0.1);
   --input-border: rgba(255,255,255,0.2);
   --placeholder-color: rgba(255,255,255,0.6);
@@ -21,7 +21,7 @@ body.light-mode {
   --glass-bg: rgba(255,255,255,0.85);
   --glass-border: rgba(0,0,0,0.15);
   --text-color: rgba(0,0,0,0.9);
-  --body-bg: linear-gradient(135deg, #3ed66c, #cfdef3);
+  --body-bg: linear-gradient(135deg, rgb(184, 177, 177), #cfdef3);
   --input-bg: rgba(255,255,255,0.95);
   --input-border: rgba(0,0,0,0.2);
   --placeholder-color: rgba(0,0,0,0.5);
@@ -44,21 +44,6 @@ body {
 }
 
 /* =============================================
-   TOPBAR
-   ============================================= */
-.topbar {
-  background: transparent;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  color: var(--text-color);
-  transition: color 0.5s;
-}
-@media (max-width: 768px) {
-  #date,
-  #user-country,
-  .topbar a[href*="linkedin.com"] {
-    display: none;
-  }
-}
 
 
 /* =============================================
@@ -120,12 +105,15 @@ body {
    ============================================= */
 .hero-section {
   position: relative;
-  min-height: 78vh;
-  padding-top: 40px !important;
-  padding-bottom: 10px;
+  min-height: 55vh; /* smaller height */
+  padding-top: 20px !important;
+  padding-bottom: 20px;
   margin-top: -20px;
   text-align: center;
 }
+
+
+
 
 .typing {
   font-size: 1.2rem;
@@ -180,13 +168,8 @@ body {
   transition: background 0.5s, color 0.5s;
 }
 
-/* =============================================
-   SECTIONS
-   ============================================= */
-section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
+
+
 
 /* =============================================
    FORMS
@@ -292,3 +275,34 @@ body.light-mode .text-white {
 }
 
 
+
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+
+/* Hide phone, date, country, LinkedIn on mobile */
+@media (max-width: 768px) {
+  .topbar .phone,          /* phone container */
+  #date,
+  #user-country,
+  .topbar a[href*="linkedin.com"] {
+    display: none !important;
+  }
+
+  /* Show only email in topbar left */
+  .topbar .email {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Theme toggle on right */
+  #themeToggle {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 1050;
+  }
+}
