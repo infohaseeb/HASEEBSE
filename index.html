@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haseeb Asghar — Portfolio</title>
+
+  <!-- Bootstrap 5.3.8 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+<div class="py-2 topbar">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Left: contact info -->
+    <div class="small text-light">
+      <i class="bi bi-telephone-fill"></i> +92-317-4537215
+      <span class="mx-2">|</span>
+      <i class="bi bi-envelope-fill"></i> haseeb@Interstolix.com
+    </div>
+
+    <!-- Right: date, country/language, LinkedIn -->
+    <div class="small text-light d-flex align-items-center">
+      <span id="date" class="me-3">Loading date...</span>
+      <span id="user-country" class="me-3">Loading country...</span>
+      <a href="https://www.linkedin.com/in/infohaseeb/" target="_blank" class="text-light ms-2">
+        <i class="bi bi-linkedin fs-5"></i>
+      </a>
+    </div>
+  </div>
+</div>
+  <!-- End Topbar -->
+
+  <!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg glass-nav">
+  <div class="container">
+    
+    <!-- Brand Left -->
+    <a class="navbar-brand text-light fw-bold" href="#home">Haseeb</a>
+
+    <!-- Toggler  -->
+    <button class="navbar-toggler border-0 text-light" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <i class="bi bi-list fs-1"></i>
+    </button>
+
+    <!-- Center Nav Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+      <ul class="navbar-nav align-items-lg-center text-center">
+    <li class="nav-item"><a class="nav-link text-light mx-2" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link text-light mx-2" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link text-light mx-2" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link text-light mx-2" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link text-light mx-2" href="#experience">Experience</a></li>
+<li class="nav-item"><a class="nav-link text-light mx-2" href="#innovation">Innovation</a></li>
+<li class="nav-item"><a class="nav-link text-light mx-2" href="#company">Company</a></li>
+<li class="nav-item"><a class="nav-link text-light mx-2" href="#contact">Contact</a></li>
+
+      </ul>
+    </div>
+
+    <!-- Buttons Right -->
+    <div class="d-none d-lg-flex">
+      <a href="https://drive.google.com/file/d/1-7ovpDVoi8kAO8kvKyr5UrW_X4z0plfC/view?usp=sharing" download class="btn btn-outline-light btn-sm me-2">CV</a>
+      <a href="#contact" class="btn btn-light btn-sm">Hire Me</a>
+      <button id="themeToggle" class="btn btn-sm btn-outline-light ms-3">
+  🌙
+</button>
+
+    </div>
+
+  </div>
+</nav>
+<!-- End Navbar -->
+
+  <!-- End Navbar -->
+
+  <!-- Hero / Header -->
+<!-- Hero / Header -->
+<!-- Hero / Header -->
+<header id="home" class="hero-section d-flex align-items-center text-center text-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <div class="glass-card py-5 px-4" data-aos="zoom-in">
+
+          <!-- Text Only -->
+          <h1 class="fw-bold mb-2">
+            Hi, I'm <span class="text-highlight">Haseeb 👋</span>
+          </h1>
+
+          <!-- Typing animation -->
+          <h4 class="typing text-light"></h4>
+
+          <p class="mt-3 mb-4">
+            Cloud & DevOps Enthusiast | Secure Deployments | Azure Solutions 🚀|Operations Handling
+          </p>
+
+          <!-- CTA Buttons -->
+          <a href="#contact" class="btn btn-light fw-semibold px-4 me-2 shadow-lg">
+            Hire Me
+          </a>
+          <a href="https://drive.google.com/file/d/1-7ovpDVoi8kAO8kvKyr5UrW_X4z0plfC/view?usp=sharing" class="btn btn-outline-light fw-semibold px-4 shadow-lg" download>
+            Download CV
+          </a>
+
+          <div class="mt-4">
+            <span class="badge bg-light text-dark mx-1">Azure</span>
+            <span class="badge bg-light text-dark mx-1">Django</span>
+            <span class="badge bg-light text-dark mx-1">PostgreSQL</span>
+            <span class="badge bg-light text-dark mx-1">DevOps</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <!-- End Hero -->
+
+  <!-- About Section (starter) -->
+<section id="about" class="py-5 section-fade">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Profile Image -->
+      <div class="col-lg-4 text-center">
+        <img src="dp.jpg" class="about-image mb-3" alt="Haseeb Image">
+        <h4 class="mt-3 fw-semibold text-white">Haseeb Asghar</h4>
+        <p class="text-gradient fw-semibold">Azure Cloud & DevOps Enthusiast </p>
+      </div>
+
+      <!-- Info -->
+      <div class="col-lg-8">
+        <div class="glass-card p-4">
+          <h3 class="fw-bold mb-3 text-white">About Me</h3>
+          <p class="about-text">
+            Passionate about <strong>Azure cloud deployment</strong>, secure authentication (Azure AD),
+            and automation using modern DevOps practices to build scalable cloud-native applications.
+          </p>
+
+          <!-- Quick Contact -->
+          <ul class="list-unstyled mt-3 text-white small">
+            <li>📍 Lahore, Pakistan</li>
+            <li>📞 +92-317-4537215</li>
+            <li>📧 haseeb@Interstolix.com</li>
+            <li>🔗 <a href="https://www.linkedin.com/in/infohaseeb/" target="_blank" class="text-accent">
+                LinkedIn Profile</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section id="experience" class="py-5">
+  <div class="container">
+
+    <h2 class="fw-bold text-center mb-5">Professional Experience</h2>
+
+    <!-- Istarga Solutions -->
+    <div class="glass-card p-4 mb-4">
+      <h5 class="fw-bold">Operations Specialist — Istarga Solutions LLP</h5>
+      <p class="mb-1"><strong>May 2024 – Present | Remote, Pakistan</strong></p>
+      <p>
+        Streamlined daily operations and improved workflow efficiency while supporting
+        cross-department collaboration. Conducted employment verifications ensuring
+        accuracy and documentation compliance across organizations.
+      </p>
+    </div>
+
+    <!-- Fiverr / Upwork -->
+    <div class="glass-card p-4 mb-4">
+      <h5 class="fw-bold">Cloud App Deployment — Fiverr / Upwork</h5>
+      <p class="mb-1"><strong>Nov 2024 – Present | Remote, Pakistan</strong></p>
+      <p>
+        Configured and deployed Django applications with custom domains and Azure hosting.
+        Integrated PostgreSQL and Azure Storage for secure media handling.
+        Implemented Azure AD authentication for secure multi-user access.
+      </p>
+    </div>
+
+    <!-- Huawei -->
+    <div class="glass-card p-4 mb-4">
+      <h5 class="fw-bold">Technical Service Engineer — Huawei Technologies</h5>
+      <p class="mb-1"><strong>Aug 2022 – Mar 2023 | Islamabad, Pakistan</strong></p>
+      <p>
+        Supported ICT infrastructure delivery and testing at Huawei Global Service Center.
+        Worked with teams on operational improvement and technical troubleshooting.
+      </p>
+    </div>
+
+    <!-- Descon / Oxychem -->
+    <div class="glass-card p-4">
+      <h5 class="fw-bold">ERP Support Intern — Descon / Oxychem Ltd</h5>
+      <p class="mb-1"><strong>Feb 2022 – May 2022 | Lahore, Pakistan</strong></p>
+      <p>
+        Supported Oracle ERP issue resolution with developer collaboration and
+        optimized data workflow to assist business operations.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+  <!-- Skills Section (starter) -->
+<section id="skills" class="py-5">
+  <div class="container">
+
+    <h2 class="fw-bold text-center mb-5">Skills & Expertise</h2>
+
+    <div class="row g-4">
+
+      <!-- Cloud & Infrastructure -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-3"><i class="bi bi-cloud-check me-2"></i>Cloud & Infrastructure</h5>
+          <p class="mb-0">
+            Microsoft Azure, Azure AD, Azure Storage, Application Deployment, Cloud Security,
+            DNS & Hosting Configurations, Multi-user Authentication
+          </p>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-3"><i class="bi bi-code-slash me-2"></i>Web Development</h5>
+          <p class="mb-0">
+            Python (Django), HTML, CSS, JavaScript, PostgreSQL, REST APIs, Bootstrap, UI Optimization
+          </p>
+        </div>
+      </div>
+
+      <!-- Operations & Technical Support -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-3"><i class="bi bi-gear-wide-connected me-2"></i>Operations & Technical Support</h5>
+          <p class="mb-0">
+            Operational Workflows, Documentation Management, Employment Verification,
+            Report Generation, ERP Support (Oracle), On-site/Remote Support,
+            Testing & Troubleshooting, Cross-department Collaboration
+          </p>
+        </div>
+      </div>
+
+      <!-- Tools & Technologies -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-3"><i class="bi bi-tools me-2"></i>Tools & Platforms</h5>
+          <p class="mb-0">
+            GitHub, VS Code, ERP Systems, Azure Portal, Linux Basics, Debugging Tools, Microsoft Office Suite
+          </p>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-3"><i class="bi bi-people-fill me-2"></i>Soft Skills</h5>
+          <p class="mb-0">
+            Team Collaboration, Critical Thinking, Communication Skills, Leadership,
+            Time Management, Problem Solving, Adaptability
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Projects (placeholder) -->
+<section id="projects" class="py-5">
+  <div class="container">
+
+    <h2 class="fw-bold text-center mb-5">Projects</h2>
+
+    <div class="row g-4">
+
+      <!-- Smart Canteen System -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-1"><i class="bi bi-shop-window me-2"></i>Smart Canteen Management System</h5>
+          <small class="opacity-75">Nov 2020 – Jun 2021 | Academic Project</small>
+          <p class="mt-2">
+            A full digital canteen system built with Python (Django) to streamline food ordering,
+            cost tracking, and institutional operations.
+          </p>
+          <ul>
+            <li>Python-based automation & menu system</li>
+            <li>Operational efficiency enhancements</li>
+            <li>Secure multi-user access</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Egg Price + Stock Automation -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-1"><i class="bi bi-egg-fill me-2"></i>Live Egg Price & Stock Control System</h5>
+          <small class="opacity-75">Delivering Feb 2025</small>
+          <p class="mt-2">
+            Automated product stock + dynamic price updating system for real-time poultry market operations.
+          </p>
+          <ul>
+            <li>Dashboard + automated data integration</li>
+            <li>Role-based access control</li>
+            <li>Inventory workflow improvement</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pares Center -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-1"><i class="bi bi-people-heart me-2"></i>PARES Center – Rehab & Education</h5>
+          <small class="opacity-75">Delivered Jan 2025</small>
+          <p class="mt-2">
+            Website for physiotherapy, autism rehabilitation & education services.
+          </p>
+          <a class="btn btn-sm btn-outline-light mt-2" href="https://parescenter.com" target="_blank">
+            Visit Project →
+          </a>
+        </div>
+      </div>
+
+      <!-- Astrway Solar Energy -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-1"><i class="bi bi-sun-fill me-2"></i>Astawray Energy – Solar Solutions</h5>
+          <small class="opacity-75">Aug 2025</small>
+          <p class="mt-2">
+            Produced a clean, minimal website to support solar energy innovations and community solutions.
+          </p>
+          <a class="btn btn-sm btn-outline-light mt-2" href="https://energy.astraway.net/" target="_blank">
+            Visit Project →
+          </a>
+        </div>
+      </div>
+
+      <!-- Interstolix Software House -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-1"><i class="bi bi-cpu me-2"></i>Interstolix – AI Cloud Solutions</h5>
+          <small class="opacity-75">Sep 2025</small>
+          <p class="mt-2">
+            AI-powered cloud solutions platform focused on automation and intelligent workflows.
+          </p>
+          <a class="btn btn-sm btn-outline-light mt-2" href="https://interstolix.com/" target="_blank">
+            Visit Project →
+          </a>
+        </div>
+      </div>
+
+      <!-- Current Work -->
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-1"><i class="bi bi-cart-check me-2"></i>E-Commerce + CRM + Sales System</h5>
+          <small class="opacity-75">In Progress (2025)</small>
+          <p class="mt-2">
+            Complete business operation system including order flow,
+            CRM, invoices & automation for SMEs.
+          </p>
+          <p class="mb-0"><em>Live demo coming soon…</em></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- Company Section -->
+<section id="company" class="py-5 section-fade">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">My Company</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="glass-card p-4 h-100 text-center">
+          <h3 class="fw-bold mb-3">Interstolix – AI & Cloud Solutions</h3>
+          <p>
+            Interstolix is my cloud-focused company delivering AI-powered automation and intelligent cloud workflows.
+            We specialize in Azure deployments, scalable cloud applications, and secure multi-user solutions.
+          </p>
+          <p>
+            Our mission is to simplify cloud operations and empower businesses to leverage cloud technology efficiently.
+          </p>
+          <a href="https://interstolix.com/" target="_blank" class="btn btn-outline-light mt-3">
+            Visit Company → 
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+  <!-- Contact -->
+<!-- Contact Section -->
+<section id="contact" class="py-5 section-fade">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Contact Me</h2>
+    
+    <div class="row g-4">
+
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-3">Get in Touch</h5>
+          <p class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Lahore, Pakistan</p>
+          <p class="mb-2"><i class="bi bi-telephone-fill me-2"></i>+92-317-4537215</p>
+          <p class="mb-2"><i class="bi bi-envelope-fill me-2"></i>infohaseebasghar@gmail.com</p>
+          <p class="mb-2"><i class="bi bi-linkedin me-2"></i>
+            <a href="https://www.linkedin.com/in/infohaseeb/" target="_blank" class="text-accent">LinkedIn Profile</a>
+          </p>
+          <div class="mt-4">
+            <a href="mailto:infohaseebasghar@gmail.com" class="btn btn-light me-2 mb-2">Email Me</a>
+            <a href="tel:+923174537215" class="btn btn-outline-light mb-2">Call Me</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="glass-card p-4 h-100">
+          <h5 class="fw-bold mb-3">Send a Message</h5>
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control form-control-sm" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control form-control-sm" id="email" placeholder="you@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control form-control-sm" id="message" rows="5" placeholder="Write your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-light px-4">Send Message</button>
+          </form>
+          <div id="formAlert" class="mt-3" style="display: none;"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+<!-- Footer -->
+<footer class="py-5">
+  <div class="container">
+    <div class="row text-center text-lg-start g-4">
+
+      <!-- About / Info -->
+      <div class="col-lg-4">
+        <h5 class="fw-bold mb-3">Haseeb Asghar</h5>
+        <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Lahore, Pakistan</p>
+        <p class="mb-1"><i class="bi bi-envelope-fill me-2"></i>haseeb@Interstolix.com</p>
+        <p class="mb-1"><i class="bi bi-telephone-fill me-2"></i>+92-317-4537215</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#home" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+          <li><a href="#skills" class="text-light text-decoration-none">Skills</a></li>
+          <li><a href="#projects" class="text-light text-decoration-none">Projects</a></li>
+          <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social & Copyright -->
+      <div class="col-lg-4">
+        <h5 class="fw-bold mb-3">Follow Me</h5>
+        <a href="https://www.linkedin.com/in/infohaseeb/" target="_blank" class="text-light me-3 fs-5">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/infohaseeb" target="_blank" class="text-light me-3 fs-5">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://twitter.com/yourusername" target="_blank" class="text-light fs-5">
+          <i class="bi bi-twitter"></i>
+        </a>
+
+        <p class="mt-3 mb-0 small">© <span id="year"></span> Haseeb Asghar — infohaseeb.com</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<a href="#" id="scrollUp" class="scroll-arrow">
+  <i class="bi bi-arrow-up"></i>
+</a>
+
+  <!-- Bootstrap JS (bundle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your JS -->
+  <script src="script.js"></script>
+</body>
+</html>
